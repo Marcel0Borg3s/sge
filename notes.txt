@@ -1,0 +1,40 @@
+SGE - Planejamento
+
+#01
+linguagem UBÍQUA;
+- linguagem sobre negócios entre o dev e o user fim (C level/gerente/cliente)
+Base:
+cruzar infos entre a necessidade e usabilidade;
+quem contrata o serviço com quem realmente usará
+
+Requisitos funcionais e não funcionais
+
+> funcionais
+cadastro de produtos/forncedor/marcas/categoria/saída
+calculo de qtd/filtro/login/permissões/dashboard/suporte integrações
+> não funcionais
+segurança/desempenho/escalabilidade/mantenabilidade/responsividade
+
+#02.1
+modelagem do Sistema
+- https://whimsical.com/sge-BFFvxLCp1YNQEQcnfp1hAf
+- seguindo padrão Djando de tabelas e grupos
+- criando a relação entre produtos e marcas > fornecedores (que poderá ser distintos), relação entre tabelas e Bd;
+
+#02.2
+modelagem de Domínios
+Definição dos domínios a serem criados;
+- exemplo: Brands/Category/Supplier/Product/Inflow/Outflow
+
+#03.1
+Stack - definição de softw de uso
+> Django / Bootstrap / CharJS - DRF, para projeto desacoplado e possíveis atualizações e uso de outras plataformas de visual;
+
+#03.2
+Alinhamento de equipe (quando for o caso)
+
+# Start Project
+- criando a venv dentro da pasta
+- install Django
+- python3 manage.py migrate #criando o bd sqlite3
+- python3 manage.py createsuperuser
