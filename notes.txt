@@ -38,3 +38,16 @@ Alinhamento de equipe (quando for o caso)
 - install Django
 - python3 manage.py migrate #criando o bd sqlite3
 - python3 manage.py createsuperuser
+
+# Iniciando a modelagem
+Tabelas q não tem dependências são o melhor caminho para iniciar;
+tabelas quais não tem relação direta com outras;
+*importância de definir previamente para evitar problemas no bd 
+
+- Iniciando uma app:
+python3 manage.py startapp brands #exemplo
+(esse é o processo base do django para criação)
+- próximo e importante é garantir a inserção da nova app em: app/settings.py > INSTALLED_APPS 'brands', #exemplo
+- criado o app: inserir no bd: 
+python3 manage.py makemigrations
+python3 manage.py runserver 
