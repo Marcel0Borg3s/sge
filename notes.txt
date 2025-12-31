@@ -50,4 +50,6 @@ python3 manage.py startapp brands #exemplo
 - próximo e importante é garantir a inserção da nova app em: app/settings.py > INSTALLED_APPS 'brands', #exemplo
 - criado o app: inserir no bd: 
 python3 manage.py makemigrations
+python3 manage.py migrate  # Aqui, pós todos app já serem criados, para ser inseridos no Bbd
+
 python3 manage.py runserver 
