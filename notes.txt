@@ -53,3 +53,29 @@ python3 manage.py makemigrations
 python3 manage.py migrate  # Aqui, pós todos app já serem criados, para ser inseridos no Bbd
 
 python3 manage.py runserver 
+
+# Criando CRUD:
+- urls.py 
+- add a url na url principal (app)
+- views.py 
+- forms.py 
+- Templates(folder): *_create/delete/datail/list/update
+- em app templates / sidebar / acrescetar o arquivo criado
+
+# CRUD de Entradas // não permite edição ou deleção 
+- urls (excluir as paths de update e delete)
+- add a url na urls principal (app)
+- views.py (tbm excluir Update e Delete)
+> filtro passa a ser por product, navegando até title__icontains
+- forms.python 
+> altera os campos: (widgets e lables):
+'supplier', 'product', 'quantity', 'description'
+como select input, pois vai ser selecionado e não incluido (input)
+- templates (exclude Delete e Update)
+> alteração em Datails e Lists
+- em app Templates/ sidebar / acrescentar 
+
+- Configurar o Admin nas Apps 
+
+
+# aula 08:54 (Templates de Ouflows)
