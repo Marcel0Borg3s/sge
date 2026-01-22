@@ -6,7 +6,7 @@ from . import models
 class OutflowForm(forms.ModelForm):
 
     class Meta:
-        model = models.Outflowflow
+        model = models.Outflow
         fields = ['product', 'quantity', 'description']
         widgets = {
             'product': forms.Select(attrs={'class': 'form-control'}),

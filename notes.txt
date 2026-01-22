@@ -78,4 +78,4 @@ como select input, pois vai ser selecionado e não incluido (input)
 - Configurar o Admin nas Apps 
 
 
-# aula 08:54 (Templates de Ouflows)
+# aula 35 10:00 (alterando product_create.html)

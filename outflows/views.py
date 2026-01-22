@@ -5,7 +5,7 @@ from . import models, forms
 
 
 class OutflowListView(ListView):
-    model = models.Inflow
+    model = models.Outflow
     template_name = 'outflow_list.html'
     context_object_name = 'outflows'
     paginate_by = 10
@@ -28,5 +28,5 @@ class OutflowCreateView(CreateView):
 
 
 class OutflowDetailView(DetailView):
-    model = models.Outflowflow
+    model = models.Outflow
     template_name = 'outflow_detail.html'

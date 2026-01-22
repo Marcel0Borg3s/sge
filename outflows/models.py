@@ -12,5 +12,5 @@ class Outflow(models.Model):
     class Meta:
         ordering = ['-created_at']
 
-    def __init__(self):
+    def __str__(self):
         return str(self.product)
