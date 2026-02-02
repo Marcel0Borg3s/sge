@@ -78,4 +78,4 @@ como select input, pois vai ser selecionado e não incluido (input)
 - Configurar o Admin nas Apps 
 
 
-# aula 35 10:00 (alterando product_create.html)
+# aula 36 15:47 (Filtro productos pt1)
