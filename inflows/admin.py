@@ -8,4 +8,4 @@ class InflowAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.Inflow, InflowAdmin)
-                
+

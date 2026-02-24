@@ -6,4 +6,5 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'description',)
     search_fields = ('name',)
 
+
 admin.register(models.Category, CategoryAdmin)
