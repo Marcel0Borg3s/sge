@@ -8,4 +8,3 @@ class SupplierAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.Supplier, SupplierAdmin)
-

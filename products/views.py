@@ -16,7 +16,6 @@ class ProductListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     paginate_by = 10
     permission_required = 'products.view_product'
 
-
     def get_queryset(self):
         queryset = super().get_queryset()
         title = self.request.GET.get('title')
@@ -26,7 +25,7 @@ class ProductListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
 
         if title:
             queryset = queryset.filter(title__icontains=title)
-        
+
         if serie_number:
             queryset = queryset.filter(serie_number__icontains=serie_number)
 
@@ -37,7 +36,7 @@ class ProductListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
             queryset = queryset.filter(brand__id=brand)
 
         return queryset
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['product_metrics'] = metrics.get_products_metrics()

@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from django.urls import reverse_lazy
 from django.db.models.query import QuerySet
 from django.views.generic import ListView, CreateView, DetailView
+from app import metrics
 from . import models, forms, serializers
 
 
@@ -13,7 +14,6 @@ class OutflowListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     paginate_by = 10
     permission_required = 'outflows.view_outflow'
 
-
     def get_queryset(self):
         queryset = super().get_queryset()
         product = self.request.GET.get('product')
@@ -22,7 +22,7 @@ class OutflowListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
             queryset = queryset.filter(product__title__icontains=product)
 
         return queryset
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['sales_metrics'] = metrics.get_sales_metrics()

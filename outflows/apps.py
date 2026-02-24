@@ -6,4 +6,3 @@ class OutflowsConfig(AppConfig):
 
     def ready(self):
         import outflows.signals
-    
